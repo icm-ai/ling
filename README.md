@@ -2,244 +2,237 @@
 
 Ling 不是翻译 App，而是“阅读中自然生长的语言学习工具”。
 
-Ling — iOS Reading-first Translation & Language Learning App (MVP Spec)
-1. Project Overview
+---
 
-Ling is an iOS application focused on text translation during reading and passive language learning.
+# Ling — iOS Reading-first Translation & Language Learning App (MVP Spec)
+
+## 1. Project Overview
+
+**Ling** is an iOS application focused on **text translation during reading** and **passive language learning**.
 
 The core idea:
 
-Translation should be seamless during reading,
-and learning should be a natural byproduct, not a forced workflow.
+> Translation should be seamless during reading,
+> and learning should be a natural byproduct, not a forced workflow.
 
-Ling is designed primarily for users reading long-form text (e.g. books in Apple Books) who want:
+Ling is designed primarily for **users reading long-form text** (e.g. books in Apple Books) who want:
 
-Higher-quality sentence / paragraph translation than the system default
+* Higher-quality sentence / paragraph translation than the system default
+* The ability to use **custom LLM translation models**
+* To save translations as reusable learning material
 
-The ability to use custom LLM translation models
+---
 
-To save translations as reusable learning material
+## 2. MVP Scope Definition
 
-2. MVP Scope Definition
-2.1 In Scope (MVP must include)
-Core Capabilities
+### 2.1 In Scope (MVP must include)
 
-Text translation
+#### Core Capabilities
 
-Input: plain text (word / sentence / paragraph)
+1. **Text translation**
 
-Output: translated text
+   * Input: plain text (word / sentence / paragraph)
+   * Output: translated text
+   * Translation powered by **user-configured LLM API**
 
-Translation powered by user-configured LLM API
+     * Example providers: OpenAI-compatible API, DeepSeek-compatible API
 
-Example providers: OpenAI-compatible API, DeepSeek-compatible API
+2. **System-level usage**
 
-System-level usage
+   * Ling can be set as the **default iOS translation app** (where supported by OS)
+   * Ling also provides an **Action Extension** as a fallback / compatibility path
 
-Ling can be set as the default iOS translation app (where supported by OS)
+3. **Learning by saving**
 
-Ling also provides an Action Extension as a fallback / compatibility path
+   * Any translation result can be saved
+   * Saved items are reviewable later inside the app
 
-Learning by saving
+4. **Minimal UI**
 
-Any translation result can be saved
+   * No gamification
+   * No tasks, reminders, or study plans
+   * Focus on reading → translating → saving → reviewing
 
-Saved items are reviewable later inside the app
+---
 
-Minimal UI
+### 2.2 Explicitly Out of Scope (MVP must NOT include)
 
-No gamification
+* ❌ Speech / TTS
+* ❌ Pronunciation scoring
+* ❌ Flashcards or spaced repetition
+* ❌ Social features
+* ❌ Built-in content discovery
+* ❌ User accounts / cloud sync
+* ❌ Paid subscription logic
 
-No tasks, reminders, or study plans
+---
 
-Focus on reading → translating → saving → reviewing
+## 3. User Experience Model
 
-2.2 Explicitly Out of Scope (MVP must NOT include)
+Ling has **three logical states**, not three learning modes:
 
-❌ Speech / TTS
-
-❌ Pronunciation scoring
-
-❌ Flashcards or spaced repetition
-
-❌ Social features
-
-❌ Built-in content discovery
-
-❌ User accounts / cloud sync
-
-❌ Paid subscription logic
-
-3. User Experience Model
-
-Ling has three logical states, not three learning modes:
-
+```
 Reading → Translating → Reviewing
-
+```
 
 These states map directly to UI surfaces.
 
-4. App Structure (High-Level)
-4.1 Main App Tabs
+---
 
-The main app uses three tabs only:
+## 4. App Structure (High-Level)
 
+### 4.1 Main App Tabs
+
+The main app uses **three tabs only**:
+
+```
 [ Read ]   [ Saved ]   [ Settings ]
-
+```
 
 No additional tabs are allowed in MVP.
 
-4.2 Read Tab
+---
 
-Purpose:
+### 4.2 Read Tab
+
+**Purpose:**
 Provide a lightweight place to translate text manually or via clipboard.
 
-Core behavior:
+**Core behavior:**
 
-Auto-detect text from clipboard when app becomes active
+* Auto-detect text from clipboard when app becomes active
+* Allow user to paste or edit text
+* Trigger translation using the configured default model
 
-Allow user to paste or edit text
+**UI elements (minimum):**
 
-Trigger translation using the configured default model
+* Text input area
+* “Translate” button
+* Translation result view
+* “Save” button (appears after translation)
 
-UI elements (minimum):
+---
 
-Text input area
+### 4.3 Saved Tab
 
-“Translate” button
-
-Translation result view
-
-“Save” button (appears after translation)
-
-4.3 Saved Tab
-
-Purpose:
+**Purpose:**
 Allow users to review translations they have chosen to save.
 
-Data structure:
+**Data structure:**
 
-Saved items contain:
+* Saved items contain:
 
-Original text
+  * Original text
+  * Translated text
+  * Timestamp
+  * Optional source metadata (string)
 
-Translated text
+**UI behavior:**
 
-Timestamp
+* List view ordered by recency
+* Tapping an item shows full original + translation
+* No forced tagging or annotation
 
-Optional source metadata (string)
+---
 
-UI behavior:
+### 4.4 Settings Tab
 
-List view ordered by recency
-
-Tapping an item shows full original + translation
-
-No forced tagging or annotation
-
-4.4 Settings Tab
-
-Purpose:
+**Purpose:**
 All complexity lives here.
 
-Required settings:
+**Required settings:**
 
-Translation Provider
+1. **Translation Provider**
 
-Provider type (OpenAI-compatible, DeepSeek-compatible, etc.)
+   * Provider type (OpenAI-compatible, DeepSeek-compatible, etc.)
+   * API base URL
+   * Model name
+2. **API Key Management**
 
-API base URL
+   * Stored securely (Keychain)
+3. **Prompt Configuration**
 
-Model name
+   * Default translation prompt
+4. **Export**
 
-API Key Management
+   * Export saved items as JSON or Markdown (basic)
 
-Stored securely (Keychain)
+Settings must be **fully functional before system extensions are used**.
 
-Prompt Configuration
+---
 
-Default translation prompt
+## 5. System Integration
 
-Export
-
-Export saved items as JSON or Markdown (basic)
-
-Settings must be fully functional before system extensions are used.
-
-5. System Integration
-5.1 Default Translation App (Primary Path)
+### 5.1 Default Translation App (Primary Path)
 
 Where supported by iOS:
 
-Ling registers as a system translation provider
+* Ling registers as a **system translation provider**
+* User can select Ling as default translation app via:
 
-User can select Ling as default translation app via:
+  ```
+  Settings → Apps → Default Apps → Translation → Ling
+  ```
 
-Settings → Apps → Default Apps → Translation → Ling
+**Behavior:**
 
+* When user selects text in supported apps (e.g. Apple Books)
+* Chooses “Translate”
+* Ling’s translation UI is invoked
+* Translation uses:
 
-Behavior:
-
-When user selects text in supported apps (e.g. Apple Books)
-
-Chooses “Translate”
-
-Ling’s translation UI is invoked
-
-Translation uses:
-
-The default model
-
-The default prompt
-
-Previously configured API key
+  * The default model
+  * The default prompt
+  * Previously configured API key
 
 No configuration UI should appear during this flow.
 
-5.2 Action Extension (Fallback Path)
+---
 
-An Action Extension must be implemented to ensure:
+### 5.2 Action Extension (Fallback Path)
 
-Compatibility with older iOS versions
+An **Action Extension** must be implemented to ensure:
 
-Compatibility with apps that do not route through default translation
+* Compatibility with older iOS versions
+* Compatibility with apps that do not route through default translation
 
-Behavior:
+**Behavior:**
 
-User selects text
+1. User selects text
+2. Chooses “Ling” from the action menu
+3. A minimal Ling UI appears:
 
-Chooses “Ling” from the action menu
-
-A minimal Ling UI appears:
-
-Original text
-
-Translation result
-
-Save / Close actions
+   * Original text
+   * Translation result
+   * Save / Close actions
 
 The extension must:
 
-Read shared configuration (App Group)
+* Read shared configuration (App Group)
+* Never request API key input
+* Never expose advanced settings
 
-Never request API key input
+---
 
-Never expose advanced settings
+## 6. Translation Logic
 
-6. Translation Logic
-6.1 Prompt Strategy (MVP)
+### 6.1 Prompt Strategy (MVP)
 
-The system uses one default prompt, configurable by the user.
+The system uses **one default prompt**, configurable by the user.
 
 Example prompt concept (illustrative only):
 
-You are a professional language translator.
-Translate the following text faithfully, preserving sentence structure.
-Prefer natural expression over literal translation.
+> You are a professional language translator.
+> Translate the following text faithfully, preserving sentence structure.
+> Prefer natural expression over literal translation.
 
 Prompt text is treated as opaque configuration and passed directly to the LLM.
 
-6.2 Request Flow
+---
+
+### 6.2 Request Flow
+
+```
 Text Input
    ↓
 Prompt Assembly
@@ -249,107 +242,97 @@ HTTP Request to LLM API
 Translation Result
    ↓
 UI Display
-
+```
 
 Error handling must include:
 
-Network errors
+* Network errors
+* API errors
+* Timeout fallback messaging
 
-API errors
+---
 
-Timeout fallback messaging
+## 7. Data Storage
 
-7. Data Storage
-7.1 Saved Items
+### 7.1 Saved Items
 
-Stored locally on device
+* Stored locally on device
+* Use lightweight persistent storage (e.g. Core Data or SQLite)
+* Shared access between:
 
-Use lightweight persistent storage (e.g. Core Data or SQLite)
+  * Main App
+  * Action Extension
+  * Translation Provider (if applicable)
 
-Shared access between:
+### 7.2 Sensitive Data
 
-Main App
+* API keys stored in Keychain
+* Accessed read-only by extensions
+* Never logged or exported
 
-Action Extension
+---
 
-Translation Provider (if applicable)
+## 8. Technical Constraints
 
-7.2 Sensitive Data
+### Platform
 
-API keys stored in Keychain
+* iOS
+* Swift
+* SwiftUI
 
-Accessed read-only by extensions
+### Architecture
 
-Never logged or exported
+* Modular
+* Clear separation between:
 
-8. Technical Constraints
-Platform
+  * UI
+  * Translation logic
+  * Persistence
+  * System extensions
 
-iOS
+### Non-goals
 
-Swift
+* No backend server
+* No analytics
+* No user tracking
 
-SwiftUI
+---
 
-Architecture
-
-Modular
-
-Clear separation between:
-
-UI
-
-Translation logic
-
-Persistence
-
-System extensions
-
-Non-goals
-
-No backend server
-
-No analytics
-
-No user tracking
-
-9. MVP Completion Criteria
+## 9. MVP Completion Criteria
 
 The MVP is considered complete when:
 
-User can configure an LLM translation provider
+1. User can configure an LLM translation provider
+2. User can translate text inside the app
+3. User can save and review translations
+4. User can invoke Ling from system text selection (default translation or action extension)
+5. No critical crashes or blocking UX issues exist
 
-User can translate text inside the app
+---
 
-User can save and review translations
+## 10. Guiding Philosophy (Do Not Violate)
 
-User can invoke Ling from system text selection (default translation or action extension)
+* Translation must feel **instant and invisible**
+* Learning must feel **optional and passive**
+* Any feature that requires the user to “decide to study” is out of scope
 
-No critical crashes or blocking UX issues exist
+---
 
-10. Guiding Philosophy (Do Not Violate)
+## 11. Future Work (Non-binding)
 
-Translation must feel instant and invisible
+These are explicitly **not part of MVP** and should not influence initial architecture decisions:
 
-Learning must feel optional and passive
+* Multiple prompts per language
+* Offline translation models
+* Cloud sync
+* Vocabulary analysis
+* Reading statistics
 
-Any feature that requires the user to “decide to study” is out of scope
+---
 
-11. Future Work (Non-binding)
+## End of Specification
 
-These are explicitly not part of MVP and should not influence initial architecture decisions:
-
-Multiple prompts per language
-
-Offline translation models
-
-Cloud sync
-
-Vocabulary analysis
-
-Reading statistics
-
-End of Specification
-
-This document defines the authoritative MVP scope for Ling.
+This document defines the **authoritative MVP scope** for Ling.
 All implementation work must align with this specification unless explicitly revised.
+
+---
