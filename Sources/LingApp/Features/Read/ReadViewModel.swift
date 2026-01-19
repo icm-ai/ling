@@ -2,6 +2,11 @@ import Foundation
 import LingCore
 import LingServices
 import LingPersistence
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
 
 @MainActor
 public final class ReadViewModel: ObservableObject {
@@ -70,5 +75,27 @@ public final class ReadViewModel: ObservableObject {
                 errorMessage = error.localizedDescription
             }
         }
+    }
+
+    public func checkClipboard() {
+        #if os(iOS)
+        if let pasteboardString = UIPasteboard.general.string, 
+           !pasteboardString.isEmpty, 
+           pasteboardString != inputText {
+            // We could show a prompt or just set the value if inputText is empty
+            if inputText.isEmpty {
+                inputText = pasteboardString
+            }
+        }
+        #elseif os(macOS)
+        let pasteboard = NSPasteboard.general
+        if let pasteboardString = pasteboard.string(forType: .string),
+           !pasteboardString.isEmpty,
+           pasteboardString != inputText {
+            if inputText.isEmpty {
+                inputText = pasteboardString
+            }
+        }
+        #endif
     }
 }

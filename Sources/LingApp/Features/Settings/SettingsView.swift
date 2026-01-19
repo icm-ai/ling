@@ -19,8 +19,10 @@ public struct SettingsView: View {
                         }
                     }
                     TextField("Base URL", text: $viewModel.baseURLString)
+                        #if os(iOS)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.URL)
+                        #endif
                     TextField("Model", text: $viewModel.model)
                     SecureField("API Key", text: $viewModel.apiKey)
                 }
@@ -38,17 +40,83 @@ public struct SettingsView: View {
                             Text("保存配置")
                         }
                     }
+                    .disabled(viewModel.isSaving || viewModel.isTesting)
+
+                    Button(action: viewModel.testConnection) {
+                        if viewModel.isTesting {
+                            ProgressView()
+                        } else {
+                            Text("测试连接")
+                        }
+                    }
+                    .disabled(viewModel.isSaving || viewModel.isTesting)
                 }
 
                 if let status = viewModel.statusMessage {
                     Section {
                         Text(status)
-                            .foregroundColor(.secondary)
+                            .font(.footnote)
+                            .foregroundColor(status.contains("✅") ? .primary : .red)
+                    }
+                }
+                
+                Section("数据导出") {
+                    Button {
+                        viewModel.prepareExport(format: .markdown)
+                    } label: {
+                        Label("导出为 Markdown", systemImage: "arrow.down.doc")
+                    }
+                    
+                    Button {
+                        viewModel.prepareExport(format: .json)
+                    } label: {
+                        Label("导出为 JSON", systemImage: "arrow.down.doc.fill")
                     }
                 }
             }
             .navigationTitle("Settings")
             .onAppear(perform: viewModel.load)
+            .sheet(isPresented: $viewModel.showExportSheet) {
+                ExportSheetView(content: viewModel.exportContent, format: viewModel.exportFormat)
+            }
+        }
+    }
+}
+
+struct ExportSheetView: View {
+    let content: String
+    let format: SettingsViewModel.ExportFormat
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationStack {
+            VStack {
+                TextEditor(text: .constant(content))
+                    .font(.system(.body, design: .monospaced))
+                    .padding()
+                
+                ShareLink(item: content, preview: SharePreview("Ling Export - \(format.rawValue)")) {
+                    Label("分享 / 保存文件", systemImage: "square.and.arrow.up")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                }
+                .padding()
+            }
+            .navigationTitle("导出预览 (\(format.rawValue))")
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("关闭") {
+                        dismiss()
+                    }
+                }
+            }
         }
     }
 }

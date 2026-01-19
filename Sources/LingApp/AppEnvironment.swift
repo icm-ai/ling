@@ -27,4 +27,12 @@ public extension AppEnvironment {
             providerConfigStore: InMemoryProviderConfigStore()
         )
     }
+    
+    static func live() -> AppEnvironment {
+        AppEnvironment(
+            translationService: TranslationServiceImplementation(),
+            savedItemsStore: LingDataStore.shared, // Assuming LingDataStore will implement SavedItemsStore or similar
+            providerConfigStore: DefaultProviderConfigStore()
+        )
+    }
 }
