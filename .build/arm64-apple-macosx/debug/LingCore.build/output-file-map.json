@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/master.swiftdeps"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingCore/ConfigManager.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/ConfigManager.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/ConfigManager.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/ConfigManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/ConfigManager.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/ConfigManager.dia"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingCore/KeychainManager.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/KeychainManager.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/KeychainManager.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/KeychainManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/KeychainManager.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/KeychainManager.dia"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingCore/LingConstants.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/LingConstants.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/LingConstants.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/LingConstants~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/LingConstants.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/LingConstants.dia"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingCore/Models/TranslationItem.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationItem.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationItem.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationItem.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationItem.dia"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingCore/Models/TranslationProviderConfig.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationProviderConfig.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationProviderConfig.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationProviderConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationProviderConfig.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingCore.build/TranslationProviderConfig.dia"
+  }
+}

@@ -1,0 +1,3 @@
+module LingServices {
+    header "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingServices.build/include/LingServices-Swift.h"
+}

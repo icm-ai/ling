@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/master.swiftdeps"
+  },
+  "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/Sources/LingTranslationProvider/TranslationProvider.swift": {
+    "dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/TranslationProvider.d",
+    "object": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/TranslationProvider.swift.o",
+    "swiftmodule": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/TranslationProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/TranslationProvider.swiftdeps",
+    "diagnostics": "/Users/mingchen/Library/Mobile Documents/com~apple~CloudDocs/Development/Ling/.build/arm64-apple-macosx/debug/LingTranslationProvider.build/TranslationProvider.dia"
+  }
+}
