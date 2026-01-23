@@ -66,3 +66,4 @@ openspec/
 AGENTS.md
 CLAUDE.md
 .agent/
+.DS_Store
