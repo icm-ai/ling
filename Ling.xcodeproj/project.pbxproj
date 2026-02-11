@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		7DE4927B2F233823006F90BA /* Ling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD0002F2C253C0060FFFF /* LingPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LingPackage; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +34,7 @@
 			isa = PBXGroup;
 			children = (
 				7DE4927D2F233823006F90BA /* Ling */,
+				DDD0002F2C253C0060FFFF /* LingPackage */,
 				7DE4927C2F233823006F90BA /* Products */,
 			);
 			sourceTree = "<group>";
