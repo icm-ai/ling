@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4AC2F3CD2AB0058ED3C /* LingApp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7DE4927B2F233823006F90BA /* Ling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD0002F2C253C0060FFFF /* LingPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LingPackage; sourceTree = SOURCE_ROOT; };
@@ -24,17 +28,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D58B4AB2F3CD2AB0058ED3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DE492722F233823006F90BA = {
 			isa = PBXGroup;
 			children = (
 				7DE4927D2F233823006F90BA /* Ling */,
 				DDD0002F2C253C0060FFFF /* LingPackage */,
+				7D58B4AB2F3CD2AB0058ED3C /* Frameworks */,
 				7DE4927C2F233823006F90BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +80,7 @@
 			);
 			name = Ling;
 			packageProductDependencies = (
+				7D58B4AC2F3CD2AB0058ED3C /* LingApp */,
 			);
 			productName = Ling;
 			productReference = 7DE4927B2F233823006F90BA /* Ling.app */;
@@ -267,6 +281,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -275,6 +290,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -300,6 +319,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +328,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -339,6 +363,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D58B4AC2F3CD2AB0058ED3C /* LingApp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LingApp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7DE492732F233823006F90BA /* Project object */;
 }
