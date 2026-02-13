@@ -7,9 +7,11 @@ import LingPersistence
 import LingExtension
 
 @available(iOS 18.0, *)
-@main
-struct TranslationProvider: TranslationUIProviderExtension {
-    var body: some TranslationUIProviderExtensionScene {
+@available(iOS 18.0, *)
+public struct TranslationProvider: TranslationUIProviderExtension {
+    public init() {}
+    
+    public var body: some TranslationUIProviderExtensionScene {
         TranslationUIProviderSelectedTextScene { selection in
             TranslationProviderView(selection: selection)
         }

@@ -8,14 +8,97 @@
 
 /* Begin PBXBuildFile section */
 		7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4AC2F3CD2AB0058ED3C /* LingApp */; };
+		7D58B4C02F3E23380058ED3C /* LingActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D58B4C72F3E23B60058ED3C /* LingExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4C62F3E23B60058ED3C /* LingExtension */; };
+		7D58B4D52F3E27B80058ED3C /* LingTranslationProvider.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D58B4DC2F3E28000058ED3C /* LingTranslationProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */; };
+		7D58B4DE2F3E28120058ED3C /* LingExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4DD2F3E28120058ED3C /* LingExtension */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7D58B4BE2F3E23380058ED3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DE492732F233823006F90BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D58B4B12F3E23370058ED3C;
+			remoteInfo = LingActionExtension;
+		};
+		7D58B4D32F3E27B80058ED3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DE492732F233823006F90BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D58B4CD2F3E27B80058ED3C;
+			remoteInfo = LingTranslationProvider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D58B4C52F3E23380058ED3C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D58B4C02F3E23380058ED3C /* LingActionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D58B4DA2F3E27B80058ED3C /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				7D58B4D52F3E27B80058ED3C /* LingTranslationProvider.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LingActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D58B4B32F3E23370058ED3C /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LingTranslationProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE4927B2F233823006F90BA /* Ling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD0002F2C253C0060FFFF /* LingPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LingPackage; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7D58B4C12F3E23380058ED3C /* Exceptions for "LingActionExtension" folder in "LingActionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7D58B4B12F3E23370058ED3C /* LingActionExtension */;
+		};
+		7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationProvider" folder in "LingTranslationProvider" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7D58B4B52F3E23380058ED3C /* LingActionExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7D58B4C12F3E23380058ED3C /* Exceptions for "LingActionExtension" folder in "LingActionExtension" target */,
+			);
+			path = LingActionExtension;
+			sourceTree = "<group>";
+		};
+		7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationProvider" folder in "LingTranslationProvider" target */,
+			);
+			path = LingTranslationProvider;
+			sourceTree = "<group>";
+		};
 		7DE4927D2F233823006F90BA /* Ling */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Ling;
@@ -24,10 +107,27 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D58B4AF2F3E23370058ED3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D58B4DE2F3E28120058ED3C /* LingExtension in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D58B4CB2F3E27B80058ED3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D58B4DC2F3E28000058ED3C /* LingTranslationProvider in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DE492782F233823006F90BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D58B4C72F3E23B60058ED3C /* LingExtension in Frameworks */,
 				7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +138,7 @@
 		7D58B4AB2F3CD2AB0058ED3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D58B4B32F3E23370058ED3C /* UniformTypeIdentifiers.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -47,6 +148,8 @@
 			children = (
 				7DE4927D2F233823006F90BA /* Ling */,
 				DDD0002F2C253C0060FFFF /* LingPackage */,
+				7D58B4B52F3E23380058ED3C /* LingActionExtension */,
+				7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */,
 				7D58B4AB2F3CD2AB0058ED3C /* Frameworks */,
 				7DE4927C2F233823006F90BA /* Products */,
 			);
@@ -56,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				7DE4927B2F233823006F90BA /* Ling.app */,
+				7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */,
+				7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +168,52 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D58B4B12F3E23370058ED3C /* LingActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D58B4C22F3E23380058ED3C /* Build configuration list for PBXNativeTarget "LingActionExtension" */;
+			buildPhases = (
+				7D58B4AE2F3E23370058ED3C /* Sources */,
+				7D58B4AF2F3E23370058ED3C /* Frameworks */,
+				7D58B4B02F3E23370058ED3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7D58B4B52F3E23380058ED3C /* LingActionExtension */,
+			);
+			name = LingActionExtension;
+			packageProductDependencies = (
+				7D58B4DD2F3E28120058ED3C /* LingExtension */,
+			);
+			productName = LingActionExtension;
+			productReference = 7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationProvider" */;
+			buildPhases = (
+				7D58B4CA2F3E27B80058ED3C /* Sources */,
+				7D58B4CB2F3E27B80058ED3C /* Frameworks */,
+				7D58B4CC2F3E27B80058ED3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */,
+			);
+			name = LingTranslationProvider;
+			packageProductDependencies = (
+				7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */,
+			);
+			productName = LingTranslationProvider;
+			productReference = 7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 		7DE4927A2F233823006F90BA /* Ling */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE492862F233824006F90BA /* Build configuration list for PBXNativeTarget "Ling" */;
@@ -70,10 +221,14 @@
 				7DE492772F233823006F90BA /* Sources */,
 				7DE492782F233823006F90BA /* Frameworks */,
 				7DE492792F233823006F90BA /* Resources */,
+				7D58B4C52F3E23380058ED3C /* Embed Foundation Extensions */,
+				7D58B4DA2F3E27B80058ED3C /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D58B4BF2F3E23380058ED3C /* PBXTargetDependency */,
+				7D58B4D42F3E27B80058ED3C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7DE4927D2F233823006F90BA /* Ling */,
@@ -81,6 +236,7 @@
 			name = Ling;
 			packageProductDependencies = (
 				7D58B4AC2F3CD2AB0058ED3C /* LingApp */,
+				7D58B4C62F3E23B60058ED3C /* LingExtension */,
 			);
 			productName = Ling;
 			productReference = 7DE4927B2F233823006F90BA /* Ling.app */;
@@ -99,6 +255,12 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					7D58B4B12F3E23370058ED3C = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					7D58B4CD2F3E27B80058ED3C = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					7DE4927A2F233823006F90BA = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -119,11 +281,27 @@
 			projectRoot = "";
 			targets = (
 				7DE4927A2F233823006F90BA /* Ling */,
+				7D58B4B12F3E23370058ED3C /* LingActionExtension */,
+				7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D58B4B02F3E23370058ED3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D58B4CC2F3E27B80058ED3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DE492792F233823006F90BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +312,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D58B4AE2F3E23370058ED3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D58B4CA2F3E27B80058ED3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DE492772F233823006F90BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,7 +335,148 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7D58B4BF2F3E23380058ED3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D58B4B12F3E23370058ED3C /* LingActionExtension */;
+			targetProxy = 7D58B4BE2F3E23380058ED3C /* PBXContainerItemProxy */;
+		};
+		7D58B4D42F3E27B80058ED3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */;
+			targetProxy = 7D58B4D32F3E27B80058ED3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7D58B4C32F3E23380058ED3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS32DM34LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D58B4C42F3E23380058ED3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS32DM34LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D58B4D82F3E27B80058ED3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS32DM34LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingTranslationProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingTranslationProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingTranslationProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D58B4D92F3E27B80058ED3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS32DM34LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingTranslationProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingTranslationProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingTranslationProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7DE492842F233824006F90BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +677,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D58B4C22F3E23380058ED3C /* Build configuration list for PBXNativeTarget "LingActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58B4C32F3E23380058ED3C /* Debug */,
+				7D58B4C42F3E23380058ED3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58B4D82F3E27B80058ED3C /* Debug */,
+				7D58B4D92F3E27B80058ED3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7DE492762F233823006F90BA /* Build configuration list for PBXProject "Ling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -368,6 +719,18 @@
 		7D58B4AC2F3CD2AB0058ED3C /* LingApp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LingApp;
+		};
+		7D58B4C62F3E23B60058ED3C /* LingExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LingExtension;
+		};
+		7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LingTranslationProvider;
+		};
+		7D58B4DD2F3E28120058ED3C /* LingExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LingExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

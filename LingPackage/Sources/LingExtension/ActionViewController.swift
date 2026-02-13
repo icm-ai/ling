@@ -4,7 +4,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 @objc(ActionViewController)
-class ActionViewController: UIViewController {
+open class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
