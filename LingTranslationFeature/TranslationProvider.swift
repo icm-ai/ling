@@ -7,6 +7,6 @@ import LingTranslationFeature
 @main
 struct LingTranslationProviderMain: TranslationUIProviderExtension {
     var body: some TranslationUIProviderExtensionScene {
-         LingTranslationFeature.TranslationProvider().body
+         LingTranslationFeature.TranslationFeatureImplementation().body
     }
 }

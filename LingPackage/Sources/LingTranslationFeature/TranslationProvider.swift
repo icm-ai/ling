@@ -5,22 +5,22 @@ import LingCore
 import LingServices
 import LingPersistence
 import LingExtension
+import TranslationUIProvider
 
-@available(iOS 18.0, *)
-@available(iOS 18.0, *)
-public struct TranslationProvider: TranslationUIProviderExtension {
+@available(iOS 18.4, *)
+public struct TranslationFeatureImplementation: TranslationUIProviderExtension {
     public init() {}
     
     public var body: some TranslationUIProviderExtensionScene {
         TranslationUIProviderSelectedTextScene { selection in
-            TranslationProviderView(selection: selection)
+            TranslationProviderView(text: selection.inputText.map { String($0.characters) } ?? "")
         }
     }
 }
 
 @available(iOS 18.0, *)
 struct TranslationProviderView: View {
-    let selection: TranslationUIProviderSelectedTextScene.Selection
+    let text: String
     @StateObject private var viewModel = ExtensionViewModel()
     
     var body: some View {
@@ -78,9 +78,11 @@ struct TranslationProviderView: View {
                         HStack {
                             if viewModel.isSaved {
                                 Image(systemName: "checkmark")
+                                .font(.body)
                                 Text("已保存")
                             } else {
                                 Image(systemName: "square.and.arrow.down")
+                                .font(.body)
                                 Text("保存到 Ling")
                             }
                         }
@@ -95,7 +97,7 @@ struct TranslationProviderView: View {
             }
         }
         .onAppear {
-            viewModel.load(text: selection.text)
+            viewModel.load(text: text)
         }
     }
 }

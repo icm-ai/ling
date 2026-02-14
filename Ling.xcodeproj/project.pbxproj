@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4AC2F3CD2AB0058ED3C /* LingApp */; };
 		7D58B4C02F3E23380058ED3C /* LingActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7D58B4C72F3E23B60058ED3C /* LingExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4C62F3E23B60058ED3C /* LingExtension */; };
-		7D58B4D52F3E27B80058ED3C /* LingTranslationProvider.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7D58B4DC2F3E28000058ED3C /* LingTranslationProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */; };
 		7D58B4DE2F3E28120058ED3C /* LingExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4DD2F3E28120058ED3C /* LingExtension */; };
+		7D58B4EB2F3F7CA10058ED3C /* LingTranslationExt.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 7D58B4CE2F3E27B80058ED3C /* LingTranslationExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D58B4F22F3F86940058ED3C /* LingTranslationFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 7D58B4F12F3F86940058ED3C /* LingTranslationFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +22,33 @@
 			remoteGlobalIDString = 7D58B4B12F3E23370058ED3C;
 			remoteInfo = LingActionExtension;
 		};
-		7D58B4D32F3E27B80058ED3C /* PBXContainerItemProxy */ = {
+		7D58B4E32F3F7C7D0058ED3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DE492732F233823006F90BA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7D58B4CD2F3E27B80058ED3C;
-			remoteInfo = LingTranslationProvider;
+			remoteInfo = TranslationExtension;
+		};
+		7D58B4E52F3F7C840058ED3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DE492732F233823006F90BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D58B4CD2F3E27B80058ED3C;
+			remoteInfo = TranslationExtension;
+		};
+		7D58B4E72F3F7C890058ED3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DE492732F233823006F90BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D58B4B12F3E23370058ED3C;
+			remoteInfo = LingActionExtension;
+		};
+		7D58B4EC2F3F7CA10058ED3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DE492732F233823006F90BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D58B4CD2F3E27B80058ED3C;
+			remoteInfo = TranslationExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -44,13 +64,13 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D58B4DA2F3E27B80058ED3C /* Embed ExtensionKit Extensions */ = {
+		7D58B4EE2F3F7CA20058ED3C /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				7D58B4D52F3E27B80058ED3C /* LingTranslationProvider.appex in Embed ExtensionKit Extensions */,
+				7D58B4EB2F3F7CA10058ED3C /* LingTranslationExt.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +80,7 @@
 /* Begin PBXFileReference section */
 		7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LingActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D58B4B32F3E23370058ED3C /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
-		7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LingTranslationProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D58B4CE2F3E27B80058ED3C /* LingTranslationExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LingTranslationExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE4927B2F233823006F90BA /* Ling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD0002F2C253C0060FFFF /* LingPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LingPackage; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -73,12 +93,12 @@
 			);
 			target = 7D58B4B12F3E23370058ED3C /* LingActionExtension */;
 		};
-		7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationProvider" folder in "LingTranslationProvider" target */ = {
+		7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationFeature" folder in "LingTranslationExt" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */;
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -91,12 +111,12 @@
 			path = LingActionExtension;
 			sourceTree = "<group>";
 		};
-		7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */ = {
+		7D58B4CF2F3E27B80058ED3C /* LingTranslationFeature */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationProvider" folder in "LingTranslationProvider" target */,
+				7D58B4D62F3E27B80058ED3C /* Exceptions for "LingTranslationFeature" folder in "LingTranslationExt" target */,
 			);
-			path = LingTranslationProvider;
+			path = LingTranslationFeature;
 			sourceTree = "<group>";
 		};
 		7DE4927D2F233823006F90BA /* Ling */ = {
@@ -119,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D58B4DC2F3E28000058ED3C /* LingTranslationProvider in Frameworks */,
+				7D58B4F22F3F86940058ED3C /* LingTranslationFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +147,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D58B4C72F3E23B60058ED3C /* LingExtension in Frameworks */,
 				7D58B4AD2F3CD2AB0058ED3C /* LingApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +168,7 @@
 				7DE4927D2F233823006F90BA /* Ling */,
 				DDD0002F2C253C0060FFFF /* LingPackage */,
 				7D58B4B52F3E23380058ED3C /* LingActionExtension */,
-				7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */,
+				7D58B4CF2F3E27B80058ED3C /* LingTranslationFeature */,
 				7D58B4AB2F3CD2AB0058ED3C /* Frameworks */,
 				7DE4927C2F233823006F90BA /* Products */,
 			);
@@ -160,7 +179,7 @@
 			children = (
 				7DE4927B2F233823006F90BA /* Ling.app */,
 				7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */,
-				7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */,
+				7D58B4CE2F3E27B80058ED3C /* LingTranslationExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,9 +210,9 @@
 			productReference = 7D58B4B22F3E23370058ED3C /* LingActionExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */ = {
+		7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationProvider" */;
+			buildConfigurationList = 7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationExt" */;
 			buildPhases = (
 				7D58B4CA2F3E27B80058ED3C /* Sources */,
 				7D58B4CB2F3E27B80058ED3C /* Frameworks */,
@@ -204,14 +223,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7D58B4CF2F3E27B80058ED3C /* LingTranslationProvider */,
+				7D58B4CF2F3E27B80058ED3C /* LingTranslationFeature */,
 			);
-			name = LingTranslationProvider;
+			name = LingTranslationExt;
 			packageProductDependencies = (
-				7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */,
+				7D58B4F12F3F86940058ED3C /* LingTranslationFeature */,
 			);
 			productName = LingTranslationProvider;
-			productReference = 7D58B4CE2F3E27B80058ED3C /* LingTranslationProvider.appex */;
+			productReference = 7D58B4CE2F3E27B80058ED3C /* LingTranslationExt.appex */;
 			productType = "com.apple.product-type.extensionkit-extension";
 		};
 		7DE4927A2F233823006F90BA /* Ling */ = {
@@ -222,13 +241,16 @@
 				7DE492782F233823006F90BA /* Frameworks */,
 				7DE492792F233823006F90BA /* Resources */,
 				7D58B4C52F3E23380058ED3C /* Embed Foundation Extensions */,
-				7D58B4DA2F3E27B80058ED3C /* Embed ExtensionKit Extensions */,
+				7D58B4EE2F3F7CA20058ED3C /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				7D58B4BF2F3E23380058ED3C /* PBXTargetDependency */,
-				7D58B4D42F3E27B80058ED3C /* PBXTargetDependency */,
+				7D58B4E42F3F7C7D0058ED3C /* PBXTargetDependency */,
+				7D58B4E62F3F7C840058ED3C /* PBXTargetDependency */,
+				7D58B4E82F3F7C890058ED3C /* PBXTargetDependency */,
+				7D58B4ED2F3F7CA10058ED3C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7DE4927D2F233823006F90BA /* Ling */,
@@ -236,7 +258,6 @@
 			name = Ling;
 			packageProductDependencies = (
 				7D58B4AC2F3CD2AB0058ED3C /* LingApp */,
-				7D58B4C62F3E23B60058ED3C /* LingExtension */,
 			);
 			productName = Ling;
 			productReference = 7DE4927B2F233823006F90BA /* Ling.app */;
@@ -282,7 +303,7 @@
 			targets = (
 				7DE4927A2F233823006F90BA /* Ling */,
 				7D58B4B12F3E23370058ED3C /* LingActionExtension */,
-				7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */,
+				7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */,
 			);
 		};
 /* End PBXProject section */
@@ -341,10 +362,25 @@
 			target = 7D58B4B12F3E23370058ED3C /* LingActionExtension */;
 			targetProxy = 7D58B4BE2F3E23380058ED3C /* PBXContainerItemProxy */;
 		};
-		7D58B4D42F3E27B80058ED3C /* PBXTargetDependency */ = {
+		7D58B4E42F3F7C7D0058ED3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationProvider */;
-			targetProxy = 7D58B4D32F3E27B80058ED3C /* PBXContainerItemProxy */;
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */;
+			targetProxy = 7D58B4E32F3F7C7D0058ED3C /* PBXContainerItemProxy */;
+		};
+		7D58B4E62F3F7C840058ED3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */;
+			targetProxy = 7D58B4E52F3F7C840058ED3C /* PBXContainerItemProxy */;
+		};
+		7D58B4E82F3F7C890058ED3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D58B4B12F3E23370058ED3C /* LingActionExtension */;
+			targetProxy = 7D58B4E72F3F7C890058ED3C /* PBXContainerItemProxy */;
+		};
+		7D58B4ED2F3F7CA10058ED3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D58B4CD2F3E27B80058ED3C /* LingTranslationExt */;
+			targetProxy = 7D58B4EC2F3F7CA10058ED3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,7 +456,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SS32DM34LS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LingTranslationProvider/Info.plist;
+				INFOPLIST_FILE = LingTranslationFeature/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LingTranslationProvider;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -430,6 +466,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingTranslationProvider;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -452,7 +489,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SS32DM34LS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LingTranslationProvider/Info.plist;
+				INFOPLIST_FILE = LingTranslationFeature/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LingTranslationProvider;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,6 +499,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mingchen.Ling.LingTranslationProvider;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -686,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationProvider" */ = {
+		7D58B4D72F3E27B80058ED3C /* Build configuration list for PBXNativeTarget "LingTranslationExt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D58B4D82F3E27B80058ED3C /* Debug */,
@@ -720,17 +758,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = LingApp;
 		};
-		7D58B4C62F3E23B60058ED3C /* LingExtension */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LingExtension;
-		};
-		7D58B4DB2F3E28000058ED3C /* LingTranslationProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LingTranslationProvider;
-		};
 		7D58B4DD2F3E28120058ED3C /* LingExtension */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LingExtension;
+		};
+		7D58B4F12F3F86940058ED3C /* LingTranslationFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LingTranslationFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

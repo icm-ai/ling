@@ -3,9 +3,9 @@ import UIKit
 import SwiftUI
 import UniformTypeIdentifiers
 
-@objc(ActionViewController)
+// @objc(ActionViewController) removed to avoid conflict
 open class ActionViewController: UIViewController {
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         // Ensure the view background is consistent

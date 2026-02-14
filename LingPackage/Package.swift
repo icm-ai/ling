@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "LingPersistence", targets: ["LingPersistence"]),
         .library(name: "LingApp", targets: ["LingApp"]),
         .library(name: "LingExtension", targets: ["LingExtension"]),
-        .library(name: "LingTranslationProvider", targets: ["LingTranslationProvider"])
+        .library(name: "LingTranslationFeature", targets: ["LingTranslationFeature"])
     ],
     targets: [
         .target(
@@ -36,7 +36,7 @@ let package = Package(
             dependencies: ["LingCore", "LingServices", "LingPersistence"]
         ),
         .target(
-            name: "LingTranslationProvider",
+            name: "LingTranslationFeature",
             dependencies: ["LingCore", "LingServices", "LingPersistence", "LingExtension"]
         )
     ]
